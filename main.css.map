@@ -1,0 +1,1 @@
+{"version":3,"file":"main.css","mappings":"AAAA,EAGE,UAAY,CADZ,QAAS,CADT,YAGF,CAEA,KAEE,kBAAmB,CADnB,mCAEF","sources":["webpack://homeworkwebpack/./src/styles/style.css"],"sourcesContent":["* {\n  padding: 0.5em;\n  margin: 0;\n  color: black;\n}\n\nhtml {\n  font-family: \"Roboto Light\", sans-serif;\n  background: #d6ecfc;\n}\n"],"names":[],"sourceRoot":""}
