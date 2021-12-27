@@ -2,7 +2,7 @@ export function createWeatherMap(el, weather) {
   const weatherLocation = `${weather.name} : ${weather.main.temp}&deg;С`;
   const apiKeyMap = "AIzaSyAj8_ynoHzOmBoKEHxYVWvGf5rAniFhmmY";
 
-  el.innerHTML += `
+  el.innerHTML = `
 <div class="showMap">
 <div id ="map"></div>
 <div><p id="p_img">${weatherLocation}<img id="imgW" src="http://openweathermap.org/img/wn/${weather.weather[0].icon}.png"
