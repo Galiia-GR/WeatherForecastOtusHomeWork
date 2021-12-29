@@ -28,4 +28,17 @@ describe("getWeatherLocation", () => {
     expect(mockFetch).toHaveBeenCalledWith(urlOpenWeather);
     expect(result).toStrictEqual(cityName);
   });
+  it("should return null, cant find weather", async () => {
+    global.fetch.mockImplementationOnce(() =>
+      Promise.resolve({
+        ok: false,
+        json: () => Promise.resolve(cityName),
+      })
+    );
+
+    const result = await getWeatherLocation(cityName);
+
+    expect(mockFetch).toHaveBeenCalledWith(urlOpenWeather);
+    expect(result).toStrictEqual(null);
+  });
 });

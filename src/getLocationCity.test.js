@@ -28,4 +28,19 @@ describe("getLocationCity", () => {
     expect(mockFetch).toHaveBeenCalledWith(urlGeo);
     expect(result).toStrictEqual(city.city);
   });
+  it("should return null, because cant find city location", async () => {
+    const city = { city: "Ufa" };
+
+    global.fetch.mockImplementationOnce(() =>
+      Promise.resolve({
+        ok: false,
+        json: () => Promise.resolve(city),
+      })
+    );
+
+    const result = await getLocationCity();
+
+    expect(mockFetch).toHaveBeenCalledWith(urlGeo);
+    expect(result).toStrictEqual(null);
+  });
 });

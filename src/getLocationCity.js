@@ -12,7 +12,7 @@ export async function getLocationCity() {
 
     throw new Error("wrong city name");
   } catch (e) {
-    console.log(`cant find city location ${cityName}`);
+    console.log("cant find city location");
   }
 
   return null;

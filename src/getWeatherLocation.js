@@ -11,7 +11,7 @@ export async function getWeatherLocation(cityName) {
     }
     throw new Error("Wrong weather");
   } catch (e) {
-    console.log(`cant find weather ${cityName}`);
+    console.log("cant find weather");
   }
   return null;
 }
